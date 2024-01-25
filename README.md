@@ -53,7 +53,7 @@ This Python script is part of the short course "Finetuning Large Language Models
 
 ### Course Objectives
 
-Upon completion of the course, you will gain the following skills:
+Upon completion of the course, we will gain the following skills:
 
 - Understand when to apply finetuning on Large Language Models (LLMs).
 - Prepare your data for finetuning.
@@ -68,5 +68,3 @@ With finetuning, you can take your own data to train the model on it and update 
 **Credit to the original owners: This script is part of the "Finetuning Large Language Models" course by Sharon Zhou at Lamini. All credits for the script go to the original creators and owners.**
 
 ---
-
-**Join our short course and enhance your understanding of finetuning large language models!**
