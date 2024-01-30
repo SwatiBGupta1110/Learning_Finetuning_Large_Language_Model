@@ -11,8 +11,6 @@ This repository contains a Python script, "01_Why_finetuning_lab_student," for c
 
 This repository contains a Python script as part of a short course on finetuning large language models (LLMs). The course, offered by Sharon Zhou, Co-Founder and CEO of Lamini, aims to provide insights into the significance of finetuning, its applications, and a comparative analysis with prompt engineering. The provided Python script showcases a lab comparing the outputs of a fine-tuned LLM with a non-fine-tuned model.
 
-## Important Notes from Transcript
-
 ### Why Fine-tuning LLMs
 
 - Understand the reasons behind fine-tuning, its purpose, and how it compares to prompt engineering.
