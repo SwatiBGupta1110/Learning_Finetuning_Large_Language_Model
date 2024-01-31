@@ -1,4 +1,4 @@
-# 01 Why Fine-Tuning
+# Finetuning Large Language Models - Lecture 1: Why Fine-Tuning
 
 ## Overview
 
