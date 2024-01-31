@@ -1,4 +1,4 @@
-# 01 Why Fine-Tuning Lab Student
+# 01 Why Fine-Tuning
 
 ## Overview
 
