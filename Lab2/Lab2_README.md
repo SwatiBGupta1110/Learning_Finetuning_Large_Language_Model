@@ -1,123 +1,55 @@
-# 01 Why Fine-Tuning Lab Student
+# 02 Where finetuning fits In
+
+# Finetuning Large Language Models - Lecture 2
 
 ## Overview
 
-This repository contains a Python script, "01_Why_finetuning_lab_student," for comparing the output of fine-tuned and non-fine-tuned language models using the lamini and llama libraries. The script utilizes the BasicModelRunner class to assess the performance of two models - one non-fine-tuned (meta-llama/Llama-2-7b-hf) and one fine-tuned (meta-llama/Llama-2-7b-chat-hf). Additionally, a comparison with ChatGPT is provided.
+This README provides insights into the second lecture of the "Finetuning Large Language Models" course by Sharon Zhou. The focus of this lecture is on the crucial role of finetuning in the training process, specifically after the pre-training step. The transcript delves into the significance of pre-training, the utilization of unlabeled data, and the transition from a base model to a fine-tuned model.
 
-# Notes:
-# Finetuning Large Language Models
+## Key Points
 
-## Overview
+### Pre-training: The Starting Point
 
-This repository contains a Python script as part of a short course on finetuning large language models (LLMs). The course, offered by Sharon Zhou, Co-Founder and CEO of Lamini, aims to provide insights into the significance of finetuning, its applications, and a comparative analysis with prompt engineering. The provided Python script showcases a lab comparing the outputs of a fine-tuned LLM with a non-fine-tuned model.
+- Pre-training precedes fine-tuning and involves training a model with random weights.
+- The model begins with no knowledge of the world and learns through next token prediction.
+- Unlabeled data, often sourced from the entire web, is used for self-supervised learning.
+- The Pile dataset, created by EleutherAI, provides structured data for effective pre-training.
 
-## Important Notes from Transcript
+### Fine-tuning Essentials
 
-### Why Fine-tuning LLMs
+- Fine-tuning follows pre-training to adapt the model for specific tasks.
+- It transforms the base model, obtained from pre-training, into a specialized model.
+- The process involves using both unlabeled and curated data, requiring less data than pre-training.
+- Fine-tuning is a versatile tool for behavior change, gaining new knowledge, and improving model capabilities.
 
-- Understand the reasons behind fine-tuning, its purpose, and how it compares to prompt engineering.
-- Explore a lab comparing a fine-tuned model with a non-fine-tuned one.
+### Fine-tuning vs. Pre-training
 
-### Fine-tuning Overview
+- Fine-tuning is a step after pre-training, building on the knowledge gained.
+- It requires less data and focuses on specific tasks, making it efficient for customization.
+- Clarity about the task's objectives is crucial for successful fine-tuning.
 
-- Fine-tuning involves specializing general-purpose models (e.g., GPT-3) for specific use cases (e.g., ChatGPT or GitHub co-pilot).
-- Analogy: General models are like primary care physicians; fine-tuned models are specialists like cardiologists or dermatologists.
-- Fine-tuning allows models to learn from more data, upgrading from a general-purpose model to a specialized one.
+### Behavior Change and Knowledge Gain
 
-### Benefits of Fine-tuning
+- Fine-tuning facilitates behavior change in the model, making it more consistent and focused.
+- It helps the model gain new knowledge, correcting outdated information and learning specific topics.
+- Tasks for fine-tuning can be categorized into text extraction and text expansion.
 
-- Enables customization to specific use cases.
-- Enhances model consistency, reducing hallucinations and improving output accuracy.
-- Allows steering the model's behavior for more desirable and tailored results.
+### Lab Recommendations for First-timers
 
-### Comparison with Prompt Engineering
+1. Identify a task by prompt engineering a large language model.
+2. Choose a task that the model performs moderately and gather 1000 input-output pairs for it.
+3. Fine-tune a small language model on the collected data to observe performance improvements.
 
-- Prompting is the practice of inputting queries to modify model outputs.
-- Pros of Prompting: No need for data to start, lower upfront cost, and minimal technical knowledge required.
-- Cons: Limited data input, issues with handling large datasets, and challenges with hallucination correction.
+## Lab Demonstration
 
-### Fine-tuning vs. Prompting
+The lecture includes a lab where participants explore datasets used for pre-training and fine-tuning. The provided script guides through loading and visualizing these datasets, emphasizing structured data for fine-tuning tasks.
 
-- Fine-tuning: Can handle almost unlimited data, corrects incorrect information, and provides better control over costs and latency.
-- Prompting: Great for generic use cases, quick starts, and prototypes but may lack precision for specific applications.
+## Setup
 
-### Fine-tuning for Performance
-
-- Improves model consistency, reliability, and moderation capabilities.
-- Allows customization of responses to maintain a consistent user experience.
-
-### Fine-tuning for Privacy
-
-- Conducting fine-tuning in a Virtual Private Cloud (VPC) or on-premise prevents data leakage and breaches.
-- Ensures data safety, especially when dealing with sensitive information.
-
-### Fine-tuning for Cost Optimization
-
-- Offers cost transparency by reducing the cost per request.
-- Provides greater control over costs, uptime, and latency.
-
-### Tools and Technologies for Fine-tuning
-
-- Utilizes Python libraries, including PyTorch (Meta), HuggingFace, and Llamanai.
-- Highlights LLAMA library's high-level interface for easy model training with minimal code.
-
-### Lab Demonstration
-
-- Compares the outputs of a non-fine-tuned model (LLAMA2) with a fine-tuned model (LLAMA2Chat) using various queries.
-- Illustrates the improved performance of the fine-tuned model in generating coherent and relevant responses.
-
-### Next Steps
-
-- The next lab will delve into the fine-tuning process and its placement in the overall training process.
+Before engaging in the lab, ensure the necessary libraries, including HuggingFace, are installed. Follow the provided Python script to load and explore datasets for a hands-on experience.
 
 ---
 
 **Note: Credit to the original owners — This script is part of the "Finetuning Large Language Models" course by Sharon Zhou at Lamini. All credits for the script go to the original creators and owners.**
-
-
-
-## Setup
-
-Before running the script, make sure to set the lamini API URL and key using the environment variables `POWERML__PRODUCTION__URL` and `POWERML__PRODUCTION__KEY`. Replace `<your_lamini_api_url>` and `<your_lamini_api_key>` with your actual lamini API URL and key.
-
-```bash
-export POWERML__PRODUCTION__URL=<your_lamini_api_url>
-export POWERML__PRODUCTION__KEY=<your_lamini_api_key>
-
-##Usage
-
-1. Clone the Repository
-
-git clone https://github.com/your-username/01_Why_finetuning_lab_student.git
-cd 01_Why_finetuning_lab_student
-
-
-2. Install Dependencies
-
-pip install -r requirements.txt
-
-
-3. Run the Script
-
-python 01_Why_finetuning_lab_student.py
-
-
-4. Review Outputs
-Explore the model responses for different queries related to dog training, Mars, and a simulated Amazon customer service interaction.
----
-
-## Example Queries
-"Tell me how to train my dog to sit"
-"What do you think of Mars?"
-"Taylor Swift's best friend"
-A simulated Amazon customer service interaction
-Model Details
-Non-Fine-Tuned Model: meta-llama/Llama-2-7b-hf
-Fine-Tuned Model: meta-llama/Llama-2-7b-chat-hf
-
-## ChatGPT Comparison
-The script includes a comparison with ChatGPT for the query "Tell me how to train my dog to sit." The provided response from ChatGPT is documented for reference.
-
-Feel free to modify the queries and explore the differences in responses between the models.
 
 
