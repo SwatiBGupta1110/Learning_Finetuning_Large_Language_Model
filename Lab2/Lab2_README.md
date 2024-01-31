@@ -1,6 +1,4 @@
-# 02 Where finetuning fits In
-
-# Finetuning Large Language Models - Lecture 2
+# Finetuning Large Language Models - Lecture 2: Where finetuning fits In
 
 ## Overview
 
