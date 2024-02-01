@@ -21,3 +21,6 @@ This script is a valuable contribution from the "Finetuning Large Language Model
 ## Embark on this Thrilling Course
 
 Embark on this thrilling course, and let the journey unfold! 🌟🚀
+
+## Course Link
+https://www.deeplearning.ai/short-courses/finetuning-large-language-models/
